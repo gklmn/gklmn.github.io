@@ -1,25 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Home</title>
-
-    <!-- Load custom style sheet -->
-    <link rel="stylesheet" type="text/css" href="theme/love.css">
+    <title>Unity WebGL Player | _2D v3</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/03_FamilyGame.json", {onProgress: UnityProgress});
+    </script>
   </head>
   <body>
-    <center>
-      <div>
-        <h1>Home</h1>
-        <p>Coming Soon</p>
-		<p><a href="../index.html">Retour</a></p>
-		<p></p>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">_2D v3</div>
       </div>
-    </center>
-
-    <footer>
-      
-    </footer>
+    </div>
   </body>
 </html>
