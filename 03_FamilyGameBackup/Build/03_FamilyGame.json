@@ -1,0 +1,11 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "03_FamilyGame.data.unityweb",
+"asmCodeUrl": "03_FamilyGame.asm.code.unityweb",
+"asmMemoryUrl": "03_FamilyGame.asm.memory.unityweb",
+"asmFrameworkUrl": "03_FamilyGame.asm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
