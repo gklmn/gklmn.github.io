@@ -1,0 +1,13 @@
+{
+"companyName": "EatPlayLearn",
+"productName": "Typing Game",
+"dataUrl": "06_TypingGame.data.unityweb",
+"asmCodeUrl": "06_TypingGame.asm.code.unityweb",
+"asmMemoryUrl": "06_TypingGame.asm.memory.unityweb",
+"asmFrameworkUrl": "06_TypingGame.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
