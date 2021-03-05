@@ -52,6 +52,7 @@ cells.map(function (x) {
         if (myPrices.indexOf(cellText) !== -1) {
             //alert("Value exists!" + cellText)
             //var btnString = '<div _ngcontent-xqx-c49="" class="cell-collapse ng-star-inserted"><btn _ngcontent-xqx-c49="" _nghost-xqx-c10=""><button _ngcontent-xqx-c10="" class="btn actionLink normal" type="button"><i _ngcontent-xqx-c49="" class="fa icon fa-angle-up"></i></button></btn></div>';
+            /*
             var btnString = `
         <div _ngcontent-rsm-c49="" class ="cell-collapse ng-star-inserted">
             <btn _ngcontent-rsm-c49="" _nghost-rsm-c10="">
@@ -70,9 +71,10 @@ cells.map(function (x) {
     </btn>
         </div>
 `;
-            //var btn = createElementFromHTML(btnString);
+            var btn = createElementFromHTML(btnString);
+            */
             var btn = createElementFromHTML(properButton);
-            //x.parentNode.appendChild(btn);
+            x.parentNode.appendChild(btn);
 
             alert("you shoud now have proper new btn on " + cellText)
             
