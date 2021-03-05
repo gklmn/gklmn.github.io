@@ -41,6 +41,7 @@ cells.map(function (x) {
 
         // Récup un bouton collapse
         if (cellText == "Litsdoubleoutwin,Double,triple,chambresepareeenfants") {
+            x.classList.add('is-important');
             var parentCell = x.parentNode;
             properButton = parentCell.querySelector('.cell-collapse');
                 //cell-collapse
