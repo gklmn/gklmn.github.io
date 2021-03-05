@@ -1,6 +1,6 @@
 
 // Repère le warning "pas de tarif" et cache le parent
-var noFareRows = Array.prototype.slice.call(document.querySelectorAll('notification'));
+var noFareRows = Array.prototype.slice.call(document.querySelectorAll('notification.ng-star-inserted'));
 
 noFareRows.map(function (x) {
     if (x.parentNode.tagName === 'PRICE-LAYOUT') {
@@ -11,6 +11,16 @@ noFareRows.map(function (x) {
     //x.style.color = "red";
     // x.style.display = "none";
     //x.classList.add("test-hidden");
+
+});
+
+var cells = Array.prototype.slice.call(document.querySelectorAll('div.cell-content'));
+
+cells.map(function (x) {
+    var test = x.textContent;
+    x.textContent = "red";
+    // x.style.display = "none";
+    x.classList.add(test);
 
 });
 
