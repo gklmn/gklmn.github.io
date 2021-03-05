@@ -18,7 +18,7 @@ var cells = Array.prototype.slice.call(document.querySelectorAll('div.cell-conte
 
 cells.map(function (x) {
     var test = x.textContent.replace(/\s+/g, '');;
-    if (!empty(test)) {
+    if (!!test) {
         x.textContent = test;
         // x.style.display = "none";
         x.classList.add(test);
