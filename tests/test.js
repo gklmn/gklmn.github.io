@@ -1,4 +1,13 @@
 
+function createElementFromHTML(htmlString) {
+    var div = document.createElement('div');
+    div.innerHTML = htmlString.trim();
+
+    // Change this to div.childNodes to support multiple top-level nodes
+    return div.firstChild;
+}
+
+
 // Repère le warning "pas de tarif" et cache le parent
 var noFareRows = Array.prototype.slice.call(document.querySelectorAll('notification.ng-star-inserted'));
 
@@ -32,10 +41,12 @@ cells.map(function (x) {
 
         // Check if a value exists in the fruits array
         if (myPrices.indexOf(cellText) !== -1) {
-            alert("Value exists!" + cellText)
-        } else {
-            // alert("Value does not exists!")
-        }
+            //alert("Value exists!" + cellText)
+            var btnString = '<div _ngcontent-xqx-c49="" class="cell-collapse ng-star-inserted"><btn _ngcontent-xqx-c49="" _nghost-xqx-c10=""><button _ngcontent-xqx-c10="" class="btn actionLink normal" type="button"><i _ngcontent-xqx-c49="" class="fa icon fa-angle-up"></i></button></btn></div>';
+            var btn = createElementFromHTML(btnString);
+            x.parentNode.appendChild(btn);
+            alert("you shoud now see a btn on " + cellText)
+        } 
     }
 
    
