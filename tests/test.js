@@ -26,7 +26,7 @@ noFareRows.map(function (x) {
 
 // Flag les lignes de groupes de prix pour style particulier
 var cells = Array.prototype.slice.call(document.querySelectorAll('div.cell-content'));
-
+var properButton = null;
 cells.map(function (x) {
     var cellText = x.textContent.replace(/\s+/g, '');;
     if (!!cellText) {
@@ -38,6 +38,14 @@ cells.map(function (x) {
         x.parentNode.parentNode.classList.add(cellText);
 
         var myPrices = ["Single", "Double", "Triple", "Orange", "Chambreseparee"];
+
+        // Récup un bouton collapse
+        if (cellText == "Litsdoubleoutwin,Double,triple,chambresepareeenfants") {
+            var parentCell = x.parentNode;
+            properButton = testContainer.querySelector('.cell-collapse');
+                //cell-collapse
+
+        }
 
         // Check if a value exists in the fruits array
         if (myPrices.indexOf(cellText) !== -1) {
@@ -61,9 +69,11 @@ cells.map(function (x) {
     </btn>
         </div>
 `;
-            var btn = createElementFromHTML(btnString);
-            x.parentNode.appendChild(btn);
-            alert("you shoud now see new btn on " + cellText)
+            //var btn = createElementFromHTML(btnString);
+            var btn = createElementFromHTML(properButton);
+            //x.parentNode.appendChild(btn);
+
+            alert("you shoud now have proper new btn on " + cellText)
             
         } 
     }
