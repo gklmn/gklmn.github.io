@@ -18,9 +18,12 @@ var cells = Array.prototype.slice.call(document.querySelectorAll('div.cell-conte
 
 cells.map(function (x) {
     var test = x.textContent.replace(/\s+/g, '');;
-    x.textContent = test;
-    // x.style.display = "none";
-    x.classList.add(test);
+    if (!empty(test)) {
+        x.textContent = test;
+        // x.style.display = "none";
+        x.classList.add(test);
+    }
+   
 
 });
 
