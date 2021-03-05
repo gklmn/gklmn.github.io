@@ -24,11 +24,13 @@ noFareRows.map(function (x) {
 });
 
 
+
+var properButton = null;
+
 // Flag les lignes de groupes de prix pour style particulier
 var cells = Array.prototype.slice.call(document.querySelectorAll('div.cell-content'));
-var properButton = null;
 cells.map(function (x) {
-    var cellText = x.textContent.replace(/\s+/g, '');;
+    var cellText = x.textContent.replace(/\s+/g, '');
     if (!!cellText) {
       //  x.textContent = test;
         x.classList.add(cellText);
@@ -74,7 +76,8 @@ cells.map(function (x) {
             var btn = createElementFromHTML(btnString);
             x.parentNode.appendChild(btn);
             */
-            x.parentNode.appendChild(properButton);
+            var newButton = properButton.cloneNode(true);
+            x.parentNode.appendChild(newButton);
             
             alert("you shoud now have proper new btn on " + cellText)
             
