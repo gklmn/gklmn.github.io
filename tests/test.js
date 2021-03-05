@@ -27,6 +27,15 @@ cells.map(function (x) {
         x.parentNode.classList.add(cellText);
         // div parent containing cell and cols
         x.parentNode.parentNode.classList.add(cellText);
+
+        var myPrices = ["Single", "Double", "Triple", "Orange", "Chambreseparee"];
+
+        // Check if a value exists in the fruits array
+        if (myPrices.indexOf(cellText) !== -1) {
+            alert("Value exists!" + cellText)
+        } else {
+            // alert("Value does not exists!")
+        }
     }
 
    
