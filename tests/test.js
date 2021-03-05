@@ -72,10 +72,10 @@ cells.map(function (x) {
         </div>
 `;
             var btn = createElementFromHTML(btnString);
-            */
-            var btn = createElementFromHTML(properButton);
             x.parentNode.appendChild(btn);
-
+            */
+            x.parentNode.appendChild(properButton);
+            
             alert("you shoud now have proper new btn on " + cellText)
             
         } 
