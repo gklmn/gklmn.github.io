@@ -67,7 +67,11 @@ cells.map(function (x) {
         // Ajout mention obligatoire
         if (myMandatoryServices.indexOf(cellText) !== -1) {
             var mandatoryFlag = createElementFromHTML(mandatoryString);
-            x.parentNode.appendChild(mandatoryFlag);
+            //x.parentNode.appendChild(mandatoryFlag);
+            // parent1 : Cell    <   parent2:  div colonne    <  parent3:  col sticky > child div.description-container
+            var parentRow = x.parentNode.parentNode.parentNode;
+            targetCell = parentCell.querySelector('div.description-container');
+            targetCell.appendChild(mandatoryFlag);
             
         }
 
