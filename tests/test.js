@@ -72,11 +72,9 @@ cells.map(function (x) {
             var parentRow = x.parentNode.parentNode.parentNode;
             console.debug("some debug 0", parentRow.toString());
             console.dir(parentRow);
-            targetCell = parentRow.querySelector('div.description-container');
+            targetCell = parentRow.querySelector('div.description-container').firstChild;
             console.debug("some debug 1", targetCell.toString());
             console.dir(targetCell);
-            console.debug("some debug 2", targetCell.firstChild.toString());
-            console.dir(targetCell.firstChild);
             //targetCell.firstChild.appendChild(mandatoryFlag);
             targetCell.appendChild(mandatoryFlag);
             
