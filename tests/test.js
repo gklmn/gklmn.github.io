@@ -72,11 +72,13 @@ cells.map(function (x) {
             var parentRow = x.parentNode.parentNode.parentNode;
             console.debug("some debug 0", parentRow.toString());
             console.dir(parentRow);
-            targetCell = parentRow.querySelector('div.description-container').firstChild;
+            targetCell = parentRow.querySelector('div.description-container').querySelector('cell');
             console.debug("some debug 1", targetCell.toString());
             console.dir(targetCell);
+            console.debug("some debug 2", targetCell.querySelector('div.cell-content').toString());
+            console.dir(targetCell.querySelector('div.cell-content'));
             //targetCell.firstChild.appendChild(mandatoryFlag);
-            targetCell.appendChild(mandatoryFlag);
+            targetCell.querySelector('div.cell-content').appendChild(mandatoryFlag);
             
         }
 
