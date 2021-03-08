@@ -2,7 +2,6 @@
 function createElementFromHTML(htmlString) {
     var div = document.createElement('div');
     div.innerHTML = htmlString.trim();
-
     // Change this to div.childNodes to support multiple top-level nodes
     return div.firstChild;
 }
@@ -20,7 +19,6 @@ noFareRows.map(function (x) {
     //x.style.color = "red";
     // x.style.display = "none";
     //x.classList.add("test-hidden");
-
 });
 
 
@@ -41,6 +39,8 @@ cells.map(function (x) {
 
         var myPrices = ["Single", "Double", "Triple", "Orange", "Chambreseparee"];
 
+        var myMandatoryServices = ["DinerdeGala24/12", "DinerdeGala31/12"]
+
         // Récup un bouton collapse
         if (cellText == "Litsdoubleoutwin,Double,triple,chambresepareeenfants") {
             x.classList.add('is-important');
@@ -50,45 +50,37 @@ cells.map(function (x) {
 
         }
 
-        // Check if a value exists in the fruits array
+        // Ajout bouton collapse sur chaque prix
         if (myPrices.indexOf(cellText) !== -1) {
-            //alert("Value exists!" + cellText)
-            //var btnString = '<div _ngcontent-xqx-c49="" class="cell-collapse ng-star-inserted"><btn _ngcontent-xqx-c49="" _nghost-xqx-c10=""><button _ngcontent-xqx-c10="" class="btn actionLink normal" type="button"><i _ngcontent-xqx-c49="" class="fa icon fa-angle-up"></i></button></btn></div>';
-            /*
-            var btnString = `
-        <div _ngcontent-rsm-c49="" class ="cell-collapse ng-star-inserted">
-            <btn _ngcontent-rsm-c49="" _nghost-rsm-c10="">
-        <button _ngcontent-rsm-c10="" class ="btn actionLink normal" type="button">
-            <i _ngcontent-rsm-c49="" class ="fa icon fa-angle-up"></i>
-            <!---->
-
-            <!---->
-
-            <!---->
-
-
-
-            <!---->
-        </button>
-    </btn>
-        </div>
-`;
-            var btn = createElementFromHTML(btnString);
-            x.parentNode.appendChild(btn);
-            */
             var newButton = properButton.cloneNode(true);
             x.parentNode.appendChild(newButton);
+          //  alert("you shoud now have proper new btn on " + cellText)  
+        }
+
+
+        // Prepare mention obligatoire
+        var mandatoryString = `<div class="gkerrorinline">
+	<div><i class="fa fa-exclamation-triangle icon" style="margin-right : 5px;"></i></div>
+    <div><div>Obligatoire</div></div>
+</div>`;
+
+        // Ajout mention obligatoire
+        if (myMandatoryServices.indexOf(cellText) !== -1) {
+            var mandatoryFlag = createElementFromHTML(mandatoryString);
+            x.parentNode.appendChild(btnmandatoryFlag);
             
-            alert("you shoud now have proper new btn on " + cellText)
-            
-        } 
+        }
+
+
+
+
     }
 
    
-
+    
 });
 
-
+alert("Fin du script de modification des données affichées");
 
 
 
