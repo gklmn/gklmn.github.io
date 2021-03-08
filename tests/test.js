@@ -67,7 +67,7 @@ cells.map(function (x) {
         // Ajout mention obligatoire
         if (myMandatoryServices.indexOf(cellText) !== -1) {
             var mandatoryFlag = createElementFromHTML(mandatoryString);
-            x.parentNode.appendChild(btnmandatoryFlag);
+            x.parentNode.appendChild(mandatoryFlag);
             
         }
 
