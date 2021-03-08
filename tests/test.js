@@ -78,7 +78,7 @@ cells.map(function (x) {
             console.debug("some debug 2", targetCell.querySelector('div.cell-content').toString());
             console.dir(targetCell.querySelector('div.cell-content'));
             //targetCell.firstChild.appendChild(mandatoryFlag);
-            targetCell.querySelector('div.cell-content').appendChild(mandatoryFlag);
+            targetCell.querySelector('div.cell-content').prependChild(mandatoryFlag);
             
         }
 
