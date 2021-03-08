@@ -77,7 +77,8 @@ cells.map(function (x) {
             console.dir(targetCell);
             console.debug("some debug 2", targetCell.firstChild.toString());
             console.dir(targetCell.firstChild);
-            targetCell.firstChild.appendChild(mandatoryFlag);
+            //targetCell.firstChild.appendChild(mandatoryFlag);
+            targetCell.appendChild(mandatoryFlag);
             
         }
 
