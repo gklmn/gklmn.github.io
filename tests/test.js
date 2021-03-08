@@ -39,7 +39,7 @@ cells.map(function (x) {
 
         var myPrices = ["Single", "Double", "Triple", "Orange", "Chambreseparee"];
 
-        var myMandatoryServices = ["DinerdeGala24/12", "DinerdeGala31/12"]
+        var myMandatoryServices = ["DinerdeGala24/12", "DinerdeGala31/12", "AppartementFamille"]
 
         // Récup un bouton collapse
         if (cellText == "Litsdoubleoutwin,Double,triple,chambresepareeenfants") {
@@ -82,16 +82,13 @@ cells.map(function (x) {
             
         }
 
-
-
-
     }
 
    
     
 });
 
-alert("Fin du script de modification des données affichées");
+alert("Fin du script de tests via modification de contenu");
 
 
 
