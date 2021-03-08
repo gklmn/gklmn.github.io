@@ -70,7 +70,10 @@ cells.map(function (x) {
             //x.parentNode.appendChild(mandatoryFlag);
             // parent1 : Cell    <   parent2:  div colonne    <  parent3:  col sticky > child div.description-container
             var parentRow = x.parentNode.parentNode.parentNode;
-            targetCell = parentRow.querySelector('div.description-container').firstChild;
+            console.debug("some debug 0", parentRow.toString());
+            targetCell = parentRow.querySelector('div.description-container');
+            console.debug("some debug 1", targetCell.toString());
+            console.debug("some debug 2", targetCell.firstChild.toString());
             targetCell.firstChild.appendChild(mandatoryFlag);
             
         }
