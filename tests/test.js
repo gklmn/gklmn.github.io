@@ -71,9 +71,12 @@ cells.map(function (x) {
             // parent1 : Cell    <   parent2:  div colonne    <  parent3:  col sticky > child div.description-container
             var parentRow = x.parentNode.parentNode.parentNode;
             console.debug("some debug 0", parentRow.toString());
+            console.dir(parentRow);
             targetCell = parentRow.querySelector('div.description-container');
             console.debug("some debug 1", targetCell.toString());
+            console.dir(targetCell);
             console.debug("some debug 2", targetCell.firstChild.toString());
+            console.dir(targetCell.firstChild);
             targetCell.firstChild.appendChild(mandatoryFlag);
             
         }
